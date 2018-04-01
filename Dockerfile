@@ -12,3 +12,5 @@ RUN cp build/bin/geth /usr/local/bin/
 
 WORKDIR /home/DATA_STORE/
 COPY ./genesis.json /home/DATA_STORE
+
+RUN geth --datadir "/home/DATA_STORE" init /home/DATA_STORE/genesis.json

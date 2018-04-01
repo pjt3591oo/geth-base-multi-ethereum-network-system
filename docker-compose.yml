@@ -2,19 +2,34 @@ version: '2'
 
 services:
     ether.node1.com:
-        image: 'test'
+        image: 'ethereum'
+        tty: true
         ports:
-            - "8545:8545"
+            - 8545:8545
         environment:
             ENV: ETHERNODE1
         container_name: ether.node1.com
-        command : geth --datadir "/home/DATA_STORE" init /home/DATA_STORE/genesis.json
+        command :  /bin/bash
+        working_dir: /home/DATA_STORE
 
     ether.node2.com:
-        image: 'test'
+        image: 'ethereum'
+        tty: true
         ports:
-            - "8546:8546"
+            - 8546:8546
         environment:
             ENV: ETHERNODE2
         container_name: ether.node2.com
-        command : geth --datadir "/home/DATA_STORE" init /home/DATA_STORE/genesis.json
+        command : /bin/bash
+        working_dir: /home/DATA_STORE
+
+    ether.node3.com:
+        image: 'ethereum'
+        tty: true
+        ports:
+            - 8547:8547
+        environment:
+            ENV: ETHERNODE3
+        container_name: ether.node3.com
+        command : /bin/bash
+        working_dir: /home/DATA_STORE
