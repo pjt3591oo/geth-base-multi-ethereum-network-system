@@ -6,8 +6,11 @@ services:
         tty: true
         ports:
             - 8545:8545
+            - 30305:30305
         environment:
             ENV: ETHERNODE1
+            RPCPORT: 8545
+            PORT: 30305
         container_name: ether.node1.com
         command :  /bin/bash
         working_dir: /home/DATA_STORE
@@ -17,10 +20,13 @@ services:
         tty: true
         ports:
             - 8546:8546
+            - 30306:30306
         environment:
             ENV: ETHERNODE2
+            RPCPORT: 8546
+            PORT: 30306
         container_name: ether.node2.com
-        command : /bin/bash
+        command :  geth --networkid 4649 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30306
         working_dir: /home/DATA_STORE
 
     ether.node3.com:
@@ -28,8 +34,11 @@ services:
         tty: true
         ports:
             - 8547:8547
+            - 30307:30307
         environment:
             ENV: ETHERNODE3
+            RPCPORT: 8547
+            PORT: 30307
         container_name: ether.node3.com
-        command : /bin/bash
+        command :  geth --networkid 4649 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8547 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30307
         working_dir: /home/DATA_STORE
