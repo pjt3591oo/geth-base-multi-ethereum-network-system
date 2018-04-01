@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    ether.node1.com:
+        image: 'test'
+        ports:
+            - "8545:8545"
+        environment:
+            ENV: ETHERNODE1
+        container_name: ether.node1.com
+        command : geth --datadir "/home/DATA_STORE" init /home/DATA_STORE/genesis.json
+
+    ether.node2.com:
+        image: 'test'
+        ports:
+            - "8546:8546"
+        environment:
+            ENV: ETHERNODE2
+        container_name: ether.node2.com
+        command : geth --datadir "/home/DATA_STORE" init /home/DATA_STORE/genesis.json
