@@ -26,7 +26,7 @@ services:
             RPCPORT: 8546
             PORT: 30306
         container_name: ether.node2.com
-        command :  geth --networkid 4649 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30306
+        command :  /bin/bash
         working_dir: /home/DATA_STORE
 
     ether.node3.com:
