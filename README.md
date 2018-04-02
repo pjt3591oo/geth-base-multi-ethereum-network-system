@@ -1,9 +1,11 @@
 # 이더리움 네트워크 구축
 
-0. go-ethereum
+0. 내려받기
 
 ```
-$ git clone https://github.com/ethereum/go-ethereum
+$ git clone https://github.com/pjt3591oo/multi-ethereum-network-system
+$ git submodule init
+$ git clone --recursive https://github.com/ethereum/go-ethereum
 ```
 
 1. 이미지 파일 생성
