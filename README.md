@@ -45,9 +45,9 @@ $ docker exec -it ether.node3.com /bin/bash
 * geth attach
 
 ```
-$ geth attach http://localhost:8545 console
-$ geth attach http://localhost:8546 console
-$ geth attach http://localhost:8547 console
+$ geth attach http://localhost:$RPCPORT console
 ```
 
-백그라운드로 실행중인 geth 실행하기
+각 컨테이너에 접속하여 백그라운드로 실행중인 geth 실행.
+
+RPCPORT는 시스템 환경변수에 rpcport가 포함되어 있다. 
