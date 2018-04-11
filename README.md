@@ -10,6 +10,8 @@ $ git clone --recursive https://github.com/ethereum/go-ethereum
 
 1. 이미지 파일 생성
 
+Dockerfile을 이용하여 이미지 빌드
+
 ```sh
 $ docker build -t ethereum .
 ```
@@ -27,7 +29,7 @@ $ docker-compost up -d
 * 컨테이너 확인
 
 ```
-$ docker ps 
+$ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
 d2de7c164fe4        ethereum            "geth --networkid 46…"   45 minutes ago      Up 45 minutes       0.0.0.0:8547->8547/tcp, 0.0.0.0:30307->30307/tcp   ether.node3.com
 7044555e3748        ethereum            "geth --networkid 46…"   45 minutes ago      Up 45 minutes       0.0.0.0:8545->8545/tcp, 0.0.0.0:30305->30305/tcp   ether.node1.com
@@ -50,4 +52,4 @@ $ geth attach http://localhost:$RPCPORT console
 
 각 컨테이너에 접속하여 백그라운드로 실행중인 geth 실행.
 
-RPCPORT는 시스템 환경변수에 rpcport가 포함되어 있다. 
+RPCPORT는 시스템 환경변수에 rpcport가 포함되어 있다.
