@@ -20,7 +20,11 @@ $ docker build -t ethereum .
 $ docker-compost up -d
 ```
 
+3. 컨테이너 삭제
 
+```sh
+$ ./etherNodeDown.sh
+```
 
 #  컨테이너 접속
 
@@ -45,14 +49,12 @@ $ docker exec -it ether.node3.com /bin/bash
 * geth attach
 
 ```
-$ geth attach http://localhost:8545 console
-$ geth attach http://localhost:8546 console
-$ geth attach http://localhost:8547 console
+$ geth attach http://localhost:${RPCPORT} console
 ```
 
 백그라운드로 실행중인 geth 실행하기
 
-3. explorer
+4. explorer
 
 ```bash
 $ cd explorer
@@ -75,3 +77,9 @@ localhost:8000 접속
 ![explorer main page](./images/explorer_main.png)
 
 아직까진 수동으로 이더 계정 생성후 마이너 동작시켜야 함
+
+5. peer 연결
+
+```
+> admin.addPeer("enode://871fab80ea0fa1e8c72afafb69c17ed5ba33e72dff0702fcf6f74cf1d129568dca5af4c05ac8e95f66043372152e25e631d8360a11a43429c17e1a7b7b3f10fa@192.168.1.25:30305")
+```

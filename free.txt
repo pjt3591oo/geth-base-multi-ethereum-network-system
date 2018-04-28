@@ -1,0 +1,17 @@
+ether.explorer.com:
+    image: 'node:8.9.4'
+    tty: true
+    ports:
+        - 8000:8000
+    volumes:
+        - ./explorer:/home/explorer
+    command :  npm start
+    working_dir: /home/explorer
+
+ether.node1.com:
+    volumes:
+        - ./static-nodes.json:/home/DATA_STORE
+
+admin.addPeer("enode://96728efc5015c5970bbe019d263fac278652dc650a43ddc9ec387af3a7f4d7accde8652c55614a5bbe2673e041e34f7856371a5abb22aae927992b0c4a532aaf@192.168.1.25:30305"),
+admin.addPeer("enode://79978ec8d9eb8c45a812466bc064d27e0c14850562c1258365afd4ebafa4c331bb80e8a79fb833e8189916d4036b99af05278c886ae91717c75a06848474b343@192.168.1.25:30306"),
+admin.addPeer("enode://98daa36229e9c10ebfb5e0971e2a12c40e78bc3c900ade08c064185ced49770cc437c7784334e6cd033382e7117eef2f6987de2346a02e0cb073f676fe4913ea@192.168.1.25:30307")

@@ -1,9 +1,0 @@
-ether.explorer.com:
-    image: 'node:8.9.4'
-    tty: true
-    ports:
-        - 8000:8000
-    volumes:
-        - ./explorer:/home/explorer
-    command :  npm start
-    working_dir: /home/explorer
