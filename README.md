@@ -59,13 +59,14 @@ $ cd explorer
 ```
 
 ```javascript
-// app.js
+// ./explorer/app/app.js
 var GETH_RPCPORT  	= 8545; 		// for geth --rpcport GETH_RPCPORT
 ```
 
 연결할 이더 노드 설정
 
 ```bash
+# ./explorer
 $ npm start
 ```
 
