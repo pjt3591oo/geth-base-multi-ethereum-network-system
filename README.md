@@ -10,8 +10,6 @@ $ git clone --recursive https://github.com/ethereum/go-ethereum
 
 1. 이미지 파일 생성
 
-Dockerfile을 이용하여 이미지 빌드
-
 ```sh
 $ docker build -t ethereum .
 ```
@@ -47,9 +45,32 @@ $ docker exec -it ether.node3.com /bin/bash
 * geth attach
 
 ```
-$ geth attach http://localhost:$RPCPORT console
+$ geth attach http://localhost:8545 console
+$ geth attach http://localhost:8546 console
+$ geth attach http://localhost:8547 console
 ```
 
-각 컨테이너에 접속하여 백그라운드로 실행중인 geth 실행.
+백그라운드로 실행중인 geth 실행하기
 
-RPCPORT는 시스템 환경변수에 rpcport가 포함되어 있다.
+3. explorer
+
+```bash
+$ cd explorer
+```
+
+```javascript
+// app.js
+var GETH_RPCPORT  	= 8545; 		// for geth --rpcport GETH_RPCPORT
+```
+
+연결할 이더 노드 설정
+
+```bash
+$ npm start
+```
+
+localhost:8000 접속
+
+![explorer main page](./images/explorer_main.png)
+
+아직까진 수동으로 이더 계정 생성후 마이너 동작시켜야 함
