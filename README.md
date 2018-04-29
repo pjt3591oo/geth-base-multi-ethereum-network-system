@@ -2,6 +2,9 @@
 
 이더리움 네트워크를 빠르게 구축하는 프로젝트
 
+[geth 사용법 바로가기](https://github.com/pjt3591oo/multi-ethereum-network-system/blob/master/docs/usage_geth.md)
+
+
 0. 내려받기
 
 ```
