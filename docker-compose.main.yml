@@ -12,7 +12,7 @@ services:
             RPCPORT: 8545
             PORT: 30305
         container_name: ether.node1.com
-        command : geth --networkid 11223344 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30305
+        command : geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30305
         working_dir: /home/DATA_STORE
 
     ether.node2.com:
@@ -26,7 +26,7 @@ services:
             RPCPORT: 8546
             PORT: 30306
         container_name: ether.node2.com
-        command : geth --networkid 11223344 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30306
+        command : geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30306
         working_dir: /home/DATA_STORE
 
     ether.node3.com:
@@ -40,5 +40,5 @@ services:
             RPCPORT: 8547
             PORT: 30307
         container_name: ether.node3.com
-        command :  geth --networkid 11223344 --maxpeers 3 --datadir /home/DATA_STORE --rpc --rpcport 8547 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30307
+        command :  geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 8547 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 30307
         working_dir: /home/DATA_STORE

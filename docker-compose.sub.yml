@@ -1,0 +1,50 @@
+version: '2'
+
+services:
+    ether.sub.node1.com:
+        image: 'ethereum'
+        tty: true
+        ports:
+            - 9545:9545
+            - 40305:40305
+        environment:
+            ENV: ETHERNODE1
+            RPCPORT: 9545
+            PORT: 40305
+        container_name: ether.sub.node1.com
+        volumes:
+            - ./static-nodes.json:/home/DATA_STORE/geth/static-nodes.json
+        command : geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 9545 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 40305
+        working_dir: /home/DATA_STORE
+
+    ether.sub.node2.com:
+        image: 'ethereum'
+        tty: true
+        ports:
+            - 9546:9546
+            - 40306:40306
+        environment:
+            ENV: ETHERNODE2
+            RPCPORT: 9546
+            PORT: 40306
+        container_name: ether.sub.node2.com
+        volumes:
+            - ./static-nodes.json:/home/DATA_STORE/geth/static-nodes.json
+        command : geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 9546 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 40306
+        working_dir: /home/DATA_STORE
+
+    ether.sub.node3.com:
+        image: 'ethereum'
+        tty: true
+        ports:
+            - 9547:9547
+            - 40307:40307
+        environment:
+            ENV: ETHERNODE3
+            RPCPORT: 9547
+            PORT: 40307
+        container_name: ether.sub.node3.com
+        volumes:
+            - ./static-nodes.json:/home/DATA_STORE/geth/static-nodes.json
+        command :  geth --networkid 11223344 --maxpeers 30 --datadir /home/DATA_STORE --rpc --rpcport 9547 --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --port 40307
+        working_dir: /home/DATA_STORE

@@ -4,6 +4,7 @@
 
 ```
 $ git clone https://github.com/pjt3591oo/multi-ethereum-network-system
+$ cd multi-ethereum-network-system
 $ git submodule init
 $ git clone --recursive https://github.com/ethereum/go-ethereum
 ```
