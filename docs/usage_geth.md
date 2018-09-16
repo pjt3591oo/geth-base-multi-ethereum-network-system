@@ -10,6 +10,12 @@ Repeat passphrase:
 Address: {4728bb3aa7ae9c527f547d4316814894ff1d7fde}
 ```
 
+* genesis block 생성
+
+```
+$ geth --datadir $PWD init genesis.block
+```
+
 * geth 실행옵션
 
 ```shell
