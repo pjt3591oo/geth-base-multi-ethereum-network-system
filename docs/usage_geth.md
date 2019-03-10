@@ -30,6 +30,8 @@ $ geth --datadir $PWD init genesis.block
 ... console                      # 출력을 콘솔로 함
 ```
 
+--targetgaslimit 4712388 : gaslimit 재설정 해당 옵션이 없으면 470만으로 수렴함
+
 ```
 $ geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/glosfer/data_test console 2>> /home/test/data_test/geth.log
 ```
